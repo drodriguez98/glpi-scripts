@@ -54,7 +54,7 @@ def insert_user(connection, username, firstname, realname, profile_id, entity_id
     query = """INSERT INTO glpi_users
                (name, realname, firstname, locations_id, profiles_id, entities_id, authtype, is_active)
                VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"""
-    cursor.execute(query, (username, firstname, realname, 0, profile_id, entity_id, 1, 1))
+    cursor.execute(query, (username, realname, firstname, 0, profile_id, entity_id, 1, 1))
     connection.commit()
     user_id = cursor.lastrowid
     cursor.close()
