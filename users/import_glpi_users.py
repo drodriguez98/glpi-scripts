@@ -8,10 +8,10 @@ from mysql.connector import Error
 
 # Configuración de la conexión a la base de datos
 db_config = {
-    'user': 'glpi_user',
-    'password': 'glpi',
-    'host': '172.17.0.2',
-    'database': 'glpidb',
+    'user': 'glpi',
+    'password': 'abc123.',
+    'host': 'localhost',
+    'database': 'glpi',
     'port': 3306
 }
 
@@ -98,7 +98,7 @@ def insert_or_update_email(connection, user_id, email):
 def main():
     connection = connect_db()
     if connection:
-        with open('users_to_import.csv', mode='r') as file:
+        with open('glpi_users.csv', mode='r') as file:
             csv_reader = csv.DictReader(file)
             for row in csv_reader:
                 username = row['username']

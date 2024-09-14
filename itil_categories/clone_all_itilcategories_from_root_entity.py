@@ -7,11 +7,11 @@ def clone_itil_categories_to_entities():
     try:
         # Conexión a la base de datos
         connection = mysql.connector.connect(
-            host='172.17.0.2',
-            port=3306,
-            database='glpidb',
-            user='glpi_user',
-            password='glpi'
+            host='localhost',       # Dirección IP del contenedor de MariaDB
+            port=3306,              # Puerto por defecto para MariaDB/MySQL
+            user='glpi',            # Usuario de la base de datos
+            password='abc123.',     # Contraseña del usuario
+            database='glpi'         # Nombre de la base de datos
         )
 
         if connection.is_connected():

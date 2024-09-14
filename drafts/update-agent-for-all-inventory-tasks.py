@@ -7,11 +7,11 @@ def update_task_actors_and_associations_by_deviceid(agent_deviceid):
     try:
         # Conectar a la base de datos
         connection = mysql.connector.connect(
-            host='172.17.0.2',     # Dirección IP del contenedor de MariaDB
-            port=3306,             # Puerto por defecto para MariaDB/MySQL
-            user='glpi_user',      # Usuario de la base de datos
-            password='glpi',       # Contraseña del usuario
-            database='glpidb'      # Nombre de la base de datos
+            host='localhost',       # Dirección IP del contenedor de MariaDB
+            port=3306,              # Puerto por defecto para MariaDB/MySQL
+            user='glpi',            # Usuario de la base de datos
+            password='abc123.',     # Contraseña del usuario
+            database='glpi'         # Nombre de la base de datos
         )
 
         if connection.is_connected():
