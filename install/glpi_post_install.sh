@@ -2,9 +2,7 @@
 
 # Elimina el archivo de la instalación de GLPI.
 
-# Nota: Añadir ServerName en /etc/apache2/apache2.conf (ServerName localhost por ejemplo) para que Apache no dé error al reiniciar el servicio
-
-# Ruta al archivo php.ini
+# Ruta al archivo de instalación
 GLPI_INSTALL_FILE_PATH="/var/www/html/glpi/install/install.php"
 
 # Verificar si el archivo de instalación de GLPI existe y eliminarlo si es necesario
