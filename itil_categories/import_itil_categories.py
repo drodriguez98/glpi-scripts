@@ -24,7 +24,7 @@ try:
     """
 
     # Open the CSV file and insert data row by row
-    with open('categories_to_import.csv', newline='', encoding='utf-8') as csvfile:
+    with open('itil_categories_to_import.csv', newline='', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile)
 
         for row in reader:
